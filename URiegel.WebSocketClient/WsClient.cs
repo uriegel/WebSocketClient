@@ -9,7 +9,7 @@ using URiegel.WebSocketClient.Exceptions;
 
 namespace URiegel.WebSocketClient;
 
-public class Client(string url, Func<string, Task> onMessage, Action onClosed)
+public class WsClient(string url, Func<string, Task> onMessage, Action onClosed)
 {
 	public bool IsConnected { get => isConnected && (tcpClient?.Connected ?? false); }
 
@@ -129,14 +129,16 @@ public class Client(string url, Func<string, Task> onMessage, Action onClosed)
 		{
 			var key = DateTime.Now.ToString();
 			var base64Key = Convert.ToBase64String(Encoding.UTF8.GetBytes(key));
-			var http =
-$@"GET {url.Url} HTTP/1.1
-Upgrade: websocket
-Connection: Upgrade
-Host: {url.Host}
-Sec-WebSocket-Key: {base64Key}
-
-";
+			var http = string.Join("\r\n",
+			[
+				$"GET {url.Url} HTTP/1.1",
+				"Upgrade: websocket",
+				"Connection: Upgrade",
+				"Host: {url.Host}",
+				$"Sec-WebSocket-Key: {base64Key}",
+				"",
+				""
+			]);
 			var bytes = Encoding.UTF8.GetBytes(http);
 			await (networkStream?.WriteAsync(bytes, 0, bytes.Length) ?? 0.ToAsync());
 
