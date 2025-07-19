@@ -1,2 +1,2 @@
 # WebSocketClient
-A C# WebSoeckt client
+A C# WebSocket client
