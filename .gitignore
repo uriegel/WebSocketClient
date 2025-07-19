@@ -2,3 +2,5 @@ Server/bin
 Server/obj
 URiegel.WebSocketClient/obj
 URiegel.WebSocketClient/bin
+Client/bin
+Client/obj

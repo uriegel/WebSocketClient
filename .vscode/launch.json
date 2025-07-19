@@ -1,0 +1,43 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Server",
+            "type": "coreclr",
+            "request": "launch",
+            "requireExactSource": true, 
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Server/bin/Debug/net9.0/Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+//            "console": "internalConsole",
+            "env": {
+     //           "DOTNET_EnableDiagnostics": "0" 
+            }
+        }, {
+            "name": "Client",
+            "type": "coreclr",
+            "request": "launch",
+            "requireExactSource": true, 
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Client/bin/Debug/net9.0/Client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+//            "console": "internalConsole",
+            "env": {
+     //           "DOTNET_EnableDiagnostics": "0" 
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Server and Client",
+            "configurations": [ "Client", "Server"]
+        }
+    ]
+}

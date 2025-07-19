@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URiegel.WebSocketClient", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{EDF7DCFD-5BAD-4A0D-9098-3B779A4D4433}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{52F03C2B-33BD-4542-8361-1946D240407B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{EDF7DCFD-5BAD-4A0D-9098-3B779A4D4433}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF7DCFD-5BAD-4A0D-9098-3B779A4D4433}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF7DCFD-5BAD-4A0D-9098-3B779A4D4433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F03C2B-33BD-4542-8361-1946D240407B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F03C2B-33BD-4542-8361-1946D240407B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F03C2B-33BD-4542-8361-1946D240407B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F03C2B-33BD-4542-8361-1946D240407B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
